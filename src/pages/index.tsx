@@ -1,5 +1,5 @@
-import { PageComponent } from '@/components/template/PageComponent';
+import { LandingPage } from '@/components/landing';
 
 export default function Home() {
-  return <PageComponent>Coin Control</PageComponent>;
+  return <LandingPage />;
 }
