@@ -16,7 +16,7 @@ export const GridComponent: React.FC<GridProps> = (props) => {
       <div
         className={`
                 relative flex flex-col justify-between rounded-lg p-4 
-                text-white overflow-hidden h-24 cursor-pointer
+                text-white overflow-hidden h-24 cursor-pointer 
             `}
         onClick={() => props.selectTransaction?.(transaction)}
       >
@@ -60,7 +60,7 @@ export const GridComponent: React.FC<GridProps> = (props) => {
   };
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5'>
+    <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5 mt-4'>
       {props.transactions.map(renderItem)}
     </div>
   );

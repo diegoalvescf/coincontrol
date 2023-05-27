@@ -35,22 +35,21 @@ export const FinancesPage: React.FC = () => {
 
   const renderControls = () => {
     return (
-      <div className='flex justify-between mb-7'>
+      <div className='flex flex-col sm:flex-row justify-between'>
         <DatePickerComponent
           date={date}
           changeDate={changeDate}
         />
 
-        <div className='flex gap-5'>
-          <div>
-            <Button
-              className=' bg-blue-500'
-              leftIcon={<IconPlus />}
-              onClick={() => setTransaction(transactionEmpty)}
-            >
-              Nova Transação
-            </Button>
-          </div>
+        <div className='flex gap-5 items-center justify-between mt-4 sm:mt-0'>
+          <Button
+            className=' bg-blue-500'
+            leftIcon={<IconPlus />}
+            onClick={() => setTransaction(transactionEmpty)}
+          >
+            Nova Transação
+          </Button>
+
           <SegmentedControl
             data={[
               { label: <IconList />, value: EDisplayType.List },
@@ -87,17 +86,16 @@ export const FinancesPage: React.FC = () => {
             save={save}
             remove={remove}
           />
-        ) : transactions.length ? (
-          <div>
-            {renderControls()}
-            {renderTransactions()}
-          </div>
         ) : (
           <div>
             {renderControls()}
-            <NotFoundSearchComponent>
-              Nenhuma transação encontrada
-            </NotFoundSearchComponent>
+            {transactions.length ? (
+              renderTransactions()
+            ) : (
+              <NotFoundSearchComponent>
+                Nenhuma transação encontrada
+              </NotFoundSearchComponent>
+            )}
           </div>
         )}
       </ContentComponent>
