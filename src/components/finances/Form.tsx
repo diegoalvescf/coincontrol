@@ -40,7 +40,7 @@ export const FormFinance: React.FC<FormProps> = (props) => {
       className={`
         flex flex-col
         border border-zinc-700
-        rounded-xl overflow-hidden
+        rounded-xl overflow-hidden 
       `}
     >
       <div className='bg-black py-3 px-7 text-zinc-400'>Formulário</div>

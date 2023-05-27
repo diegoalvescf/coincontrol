@@ -62,7 +62,7 @@ export const FinancesComponent: React.FC<FinancesProps> = ({
 
   return (
     <div
-      className={`flex flex-col border border-zinc-700 rounded-xl overflow-hidden`}
+      className={`flex flex-col border border-zinc-700 rounded-xl overflow-hidden mt-4`}
     >
       {transactions.map(renderLine)}
     </div>
