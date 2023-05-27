@@ -1,6 +1,13 @@
 # Controle de Gastos
 
-Este é um projeto com foco em estudos, é um aplicativo web de controle de gastos que permite aos usuários gerenciar suas despesas e receitas. Ele oferece recursos de CRUD (criação, leitura, atualização e exclusão) para os dados do usuário, bem como controle de lançamentos de gastos. Além disso, o aplicativo fornece totalizadores de gastos e entradas com base no mês selecionado. A lista de custos é renderizada dinamicamente de acordo com o mês selecionado pelo usuário.
+Este é um projeto com foco em estudos. É um aplicativo web de controle de gastos que permite aos usuários gerenciar suas despesas e receitas. O projeto inclui uma landing page e requer autenticação para acessar as páginas principais.
+
+## Funcionalidades
+
+- CRUD (criação, leitura, atualização e exclusão) para os dados do usuário.
+- Controle de lançamentos de gastos e receitas.
+- Totalizadores de gastos e entradas com base no mês selecionado.
+- Renderização dinâmica da lista de custos de acordo com o mês selecionado pelo usuário.
 
 ## Tecnologias Utilizadas 
 
@@ -14,6 +21,14 @@ Este é um projeto com foco em estudos, é um aplicativo web de controle de gast
 - HTML5: Linguagem de marcação para estruturar e apresentar o conteúdo da web.
 - JavaScript (JS): Linguagem de programação para adicionar interatividade a páginas web.
 - CSS: Linguagem de estilo para estilizar os elementos da página.
+
+## Funcionalidade de Autenticação
+
+O projeto inclui um sistema de autenticação que controla o acesso às páginas principais. A autenticação é necessária para garantir que apenas usuários registrados possam acessar as funcionalidades do aplicativo.
+
+Ao acessar o aplicativo, os usuários serão redirecionados para a landing page, onde encontrarão opção para criar uma nova conta ou fazer login social. Após o registro ou o login bem-sucedido, os usuários serão direcionados às páginas principais, onde poderão gerenciar suas despesas e receitas.
+
+Caso um usuário não autenticado tente acessar diretamente as páginas principais sem fazer login, ele será redirecionado para a landing page.
 
 ## Instalação e Execução
 
