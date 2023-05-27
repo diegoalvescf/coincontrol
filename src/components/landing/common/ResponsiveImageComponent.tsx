@@ -13,6 +13,7 @@ export const ResponsiveImageComponent: React.FC<ImageResponsiveProps> = ({
     <Image
       src={image}
       alt='Imagem'
+      loading='lazy'
       className={`
         w-[100%] h-[120px] 
         sm:w-[200px] sm:h-[365px]
