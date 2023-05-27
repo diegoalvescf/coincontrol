@@ -1,6 +1,16 @@
+import AuthContext from '@/data/contexts/AuthContext';
 import { IconArrowRight, IconVideo } from '@tabler/icons-react';
+import { useContext } from 'react';
 
 export const SloganComponent: React.FC = () => {
+  const { loginGoogle } = useContext(AuthContext);
+
+  const handleVideoClick = () => {
+    const videoUrl =
+      'https://www.tiktok.com/@dalvesdev/video/7220948293692558598';
+    window.open(videoUrl, '_blank');
+  };
+
   const renderPhrase = () => {
     return (
       <div
@@ -64,11 +74,11 @@ export const SloganComponent: React.FC = () => {
       <div className='flex justify-center sm:justify-start items-center gap-2'>
         <div
           className={`
-                        flex items-center gap-2 cursor-pointer
-                        bg-gradient-to-r from-indigo-600 to-cyan-600
-                        text-white px-5 py-2.5 rounded-md
-                    `}
-          onClick={() => console.log('👽 👉 login google destaques')}
+              flex items-center gap-2 cursor-pointer
+              bg-gradient-to-r from-indigo-600 to-cyan-600
+              text-white px-5 py-2.5 rounded-md
+          `}
+          onClick={loginGoogle}
         >
           <span className='font-thin md:text-sm text-base'>
             Iniciar <span className='hidden sm:inline'>Agora</span>
@@ -80,9 +90,10 @@ export const SloganComponent: React.FC = () => {
         </div>
         <div
           className={`
-                    flex items-center gap-2 cursor-pointer
-                    text-zinc-300 px-5 py-2.5
-                `}
+              flex items-center gap-2 cursor-pointer
+              text-zinc-300 px-5 py-2.5
+          `}
+          onClick={handleVideoClick}
         >
           <IconVideo stroke={1} />
           <span className='font-thin md:text-sm text-base'>
