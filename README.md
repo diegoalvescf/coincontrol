@@ -9,7 +9,7 @@ Este é um projeto com foco em estudos. É um aplicativo web de controle de gast
 - Totalizadores de gastos e entradas com base no mês selecionado.
 - Renderização dinâmica da lista de custos de acordo com o mês selecionado pelo usuário.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 
 
 - React: Biblioteca JavaScript para construção de interfaces de usuário.
 - Next.js: Framework React de renderização do lado do servidor (SSR) e criação de aplicativos web.
@@ -47,12 +47,12 @@ Após as configurações no firebase, basta configurar o projeto
 - Copie as informações de configuração fornecidas pelo Firebase e adicione-as ao seu projeto.
 
 - No diretório do projeto, abra o arquivo .env.local (ou crie um novo arquivo .env.local na raiz do projeto).
-  Adicione as seguintes variáveis de ambiente no arquivo .env.local:
+Adicione as seguintes variáveis de ambiente no arquivo .env.local:
 
-  NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-
-  NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-
-  NEXT_PUBLIC_FIREBASE_API_KEY=
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID= 
+   
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN= 
+   
+   NEXT_PUBLIC_FIREBASE_API_KEY= 
 
 ## Caso deseje ver o projeto publicado, segue o link do projeto: https://coincontrol.vercel.app/
