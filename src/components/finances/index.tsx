@@ -69,7 +69,10 @@ export const FinancesPage: React.FC = () => {
         selectTransaction={setTransaction}
       />
     ) : (
-      <GridComponent transactions={transactions} />
+      <GridComponent
+        transactions={transactions}
+        selectTransaction={setTransaction}
+      />
     );
   };
 
@@ -77,8 +80,6 @@ export const FinancesPage: React.FC = () => {
     <PageComponent>
       <HeaderInternalComponent />
       <ContentComponent className='gap-5'>
-        <SummaryComponent transactions={transactions} />
-
         {transaction ? (
           <FormFinance
             transaction={transaction}
@@ -88,6 +89,7 @@ export const FinancesPage: React.FC = () => {
           />
         ) : (
           <div>
+            <SummaryComponent transactions={transactions} />
             {renderControls()}
             {transactions.length ? (
               renderTransactions()

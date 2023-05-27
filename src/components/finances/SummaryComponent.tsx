@@ -28,7 +28,7 @@ export const SummaryComponent: React.FC<SummaryProps> = (props) => {
   return (
     <div
       className={`
-            grid grid-cols-1 md:grid-cols-3 gap-4
+            grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 sm:mb-4
         `}
     >
       <SummaryItemComponent
