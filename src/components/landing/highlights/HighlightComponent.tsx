@@ -1,6 +1,6 @@
 import { AreaComponent } from '../common/AreaComponent';
 import { SloganComponent } from './SloganComponent';
-import principal from '../../../../public/principal.jpg';
+import principal from '../../../../public/calculating-cost-principal.webp';
 import { ResponsiveImageComponent } from '../common/ResponsiveImageComponent';
 
 export const HighlightComponent: React.FC = () => {

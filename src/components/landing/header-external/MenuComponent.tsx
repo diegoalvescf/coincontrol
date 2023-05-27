@@ -1,10 +1,10 @@
 import { IconBrandGoogle } from '@tabler/icons-react';
 import { MenuItemComponent } from './MenuItemComponent';
+import { useContext } from 'react';
+import AuthContext from '@/data/contexts/AuthContext';
 
 export const MenuComponent: React.FC = () => {
-  const handleLoginWithGoogle = () => {
-    console.log('👽 👉 login google');
-  };
+  const { loginGoogle } = useContext(AuthContext);
 
   return (
     <div className='flex gap-2'>
@@ -31,7 +31,7 @@ export const MenuComponent: React.FC = () => {
 
       <MenuItemComponent
         className='bg-gradient-to-r from-indigo-600 to-cyan-600'
-        onClick={handleLoginWithGoogle}
+        onClick={loginGoogle}
       >
         <div className='flex items-center gap-2'>
           <IconBrandGoogle size={15} />
