@@ -51,7 +51,6 @@ export const FormFinance: React.FC<FormProps> = (props) => {
           label='Descrição'
           value={data?.description}
           onChange={changeAttribute('description')}
-          disabled={TextInputValidator.between(data.description, 2, 80)}
         />
 
         <TextInput
@@ -90,7 +89,10 @@ export const FormFinance: React.FC<FormProps> = (props) => {
           className='bg-green-500'
           color='green'
           onClick={() => handleSave(data)}
-          disabled={data.value === 0}
+          disabled={
+            data.value === 0 ||
+            TextInputValidator.between(data.description, 2, 80)
+          }
         >
           Salvar
         </Button>
