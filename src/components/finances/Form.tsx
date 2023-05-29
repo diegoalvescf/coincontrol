@@ -4,6 +4,7 @@ import { ETransactionType } from '@/logic/core/finances/ETransactionType';
 import ITransaction from '@/logic/core/finances/Transaction';
 
 import MoneyFormatting from '@/logic/utils/MoneyFormatting';
+import TextInputValidator from '@/logic/utils/TextInputValidator';
 import { Button, Group, Radio, TextInput } from '@mantine/core';
 import { DatePickerInput } from '@mantine/dates';
 import 'dayjs/locale/pt-br';
@@ -50,6 +51,7 @@ export const FormFinance: React.FC<FormProps> = (props) => {
           label='Descrição'
           value={data?.description}
           onChange={changeAttribute('description')}
+          disabled={TextInputValidator.between(data.description, 2, 80)}
         />
 
         <TextInput
